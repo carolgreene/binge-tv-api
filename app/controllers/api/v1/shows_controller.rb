@@ -2,7 +2,7 @@ class Api::V1::ShowsController < ApplicationController
 
   def index 
     @shows = Show.all 
-    render json: "need to add my serializer"
+    render json: @shows
   end
 
   def show 
