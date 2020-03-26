@@ -1,7 +1,8 @@
-class ShowsController < ApplicationController
+class Api::V1::ShowsController < ApplicationController
 
   def index 
     @shows = Show.all 
+    render json: "need to add my serializer"
   end
 
   def show 
@@ -11,7 +12,7 @@ class ShowsController < ApplicationController
     @show = Show.new(show_params)
 
     if @show.save
-      render json:#add serializer info
+      render json: "add serializer"
     else
       error_resp = {
         error: @show.errors.full_messages.to_sentence
@@ -22,7 +23,7 @@ class ShowsController < ApplicationController
 
   def update 
     if @show.update(show_params)
-      render json: #add serializer info
+      render json: "add serializer"
     else
        error_resp = {
          error: @show.errors.full_messages.to_sentence
@@ -34,7 +35,7 @@ class ShowsController < ApplicationController
   def destroy
     @shows = Show.all
     @show.destroy
-    render json: #add serializer info
+    render json: "add serializer"
   end
 
   private
