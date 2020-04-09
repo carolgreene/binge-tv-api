@@ -1,7 +1,7 @@
 class Api::V1::ShowsController < ApplicationController
 
   def index 
-    shows = Show.all 
+    shows = Show.all
     render json: ShowSerializer.new(shows)
   end
 
