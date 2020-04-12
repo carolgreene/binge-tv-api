@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_12_144709) do
+ActiveRecord::Schema.define(version: 2020_04_12_151702) do
 
   create_table "networks", force: :cascade do |t|
     t.string "name"
@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(version: 2020_04_12_144709) do
     t.string "summary"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "network_id"
+    t.index ["network_id"], name: "index_shows_on_network_id"
   end
 
 end
