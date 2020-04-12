@@ -8,5 +8,10 @@
 #User.create(email: 'max@max.com', password: 'password')
 #User.create(email: 'ace@ace.com', password: 'password')
 
+Network.create(name: 'HBO')
+Network.create(name: 'Showtime')
+Network.create(name: 'Netflix')
+Network.create(name: 'Amazon Prime')
+
 #Show.create(name: 'Breaking Bad', genre: 'drama', summary: 'High school chemistry teacher gets cancer and ends up making meth because he needs money for his treatment.')
 #Show.create(name: 'Friends', genre: 'comedy', summary: 'Group of 20 something friends hang out and grow up together.')
